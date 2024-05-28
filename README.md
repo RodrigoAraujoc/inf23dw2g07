@@ -1,107 +1,56 @@
-# inf23dw2g07
+# My work assignment Title
 
+Developed by Group 07 : [@RodrigoAraujoc](https://github.com/RodrigoAraujoc), [@Tell2323](https://github.com/Tell2323).
 
+## Short theme description
 
-# Broken Object Property Level Authorization
+An example report using markdown on Github. This documentation is writen using [Markdown](https://www.markdownguide.org/). Here is a [link to the basic syntax](https://www.markdownguide.org/basic-syntax), but an [extended syntax](https://www.markdownguide.org/extended-syntax/) is also available. If you're starting with Markdown, you may want to try a [Markdown Tutorial](https://www.markdowntutorial.com/) and read the [getting started](https://www.markdownguide.org/getting-started/) section.
 
-- Mass Assignment
-  - Vulnerable Endpoints
-    - POST /api/users
-- Excessive Data Exposure
-  - Vulnerable Endpoints
-    - GET /api/authors
-    - GET /api/books
+## Repository organization
 
-# Broken Object Level Authorization
+_Please help reader navigate around describing how the repository is organized by providing links_
+* **Source code** is in the [src folder](src/).
+* Report chapters are in [doc folder](doc/).
+* Initial [OpenApi document](api/openapi.yaml)
 
-- Vulnerable Endpoints
-  - GET /api/users/:name
-  - PUT /api/users/:id
-    - Get the id from the following endpoints
-      - POST /api/auth (Add invalid password for a valid username and check the API response)
-      - POST /api/otp (Add username and check the API response)
+## Gallery
 
-# Broken Function Level Authorization
+_Please provide a galery of the final result, with small images_
+A [table](https://www.markdownguide.org/extended-syntax/#tables) may be usefull to organize the images.
 
-- Vulnerable Endpoints
-  - POST /api/books
-  - PUT /api/books/:bookId
-  - DELETE /api/books/:bookId
-  - POST /api/authors
-  - PUT /api/authors/:authorId
-  - DELETE /api/authors/:authorId
+## Technologies
 
-# Server-Side Request Forgery
+_Indicate the technologies you have used in this assignment. Please provide links for the user to read more about those technologies._
+* [XML](https://www.w3.org/XML/)
+* [HTML5](https://html.spec.whatwg.org/multipage/) + [CSS3](https://www.w3.org/Style/CSS/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
+* [PHP](https://www.php.net/)
+* [nodeJS](https://nodejs.org/en/)
+* _Any other?_
 
-- Vulnerable Endpoint
-  - PUT /api/users/:id
+### Frameworks and Libraries
 
-# Improper Inventory Management
+_Did you use any aditional libraries? Describe them here._
+* Docker
+* Multipass
+* NodeJS
+* JQuery
+* Laravel
+* Bootstrap
+* ReactJS
 
-- localhost:3001/api/users: 
-- dev.localhost:3001/api/users: 
+## Report
+_Please add at least on section (a file) per Chapter. But you can add more._
 
-# Unsafe Consumption of APIs
+### Project presentation
+* Chapter 1: [Project presentation](doc/c1.md)
+### Resources
+* Chapter 2: [Resources](doc/c2.md)
+### Product
+* Chapter 3: [Product](doc/c3.md)
+### Presentation
+* Chapter 4: [Presentation](doc/c4.md)
 
-The API Does not properly validate and sanitize data gathered from other APIs. The API sends the following request to store email in a third-party API.
-
-
-- Navigate to /about. Add your XSS payload in email and subscribe. The subscribed email will be returned from the third-party API to the application.
-
-
-# Broken Authentication
-
-- JWT Key Confusion
-
-  - GET /api/system/key: public key
-
-- Weak Password
-  - Admin Login: http://localhost:3000/admin/login
-  - Vulnerable Endpoint: POST /api/adminAuth
-    - Credentials:
-      - Username: admin
-      - Password: admin1234
-- Weak Implementation of Reset Password (Account Takeover)
-  - POST /api/users/verify
-
-# Security Misconfiguration
-
-- The logging is enabled in this application. Send a request to the following endpoint to access the log file
-  - Vulnerable Endpoint
-    - GET /api/logs
-
-# Unrestricted Resource Consumption
-
-- ReDOS
-  - Vulnerable Endpoint
-    - GET /api/users/:name
-
-# Unrestricted Access to Sensitive Business Flows
-
-Users can invite their friends and gain credit for each friend who has joined the app. This credit can be later used as cash to get a free book. An attacker exploits this flow by writing a script to automate the registration process, with each new user adding credit to the attacker's account.
-
-- Automation Process
-  GET /profile/{YourUsername}: Get ref link from your profile
-  POST /api/users + ref link
-
-
-
-# Injection
-
-- NOSQL injection
-  - Vulnerable Endpoint
-    - GET /api/me?id={payload}
-- XSS
-  - Vulnerable Endpoint
-    - PUT /api/users/:id
-
-# Web Cache Deception
-
-- Vulnerable Endpoint: GET /api/me
-
-
-# Sudents
-
-Guilherme Almeida A040435
-
-Rodrigo Araujo A043595
+## Team
+* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
+* Other team members
