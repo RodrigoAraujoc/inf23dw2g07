@@ -1,0 +1,92 @@
+### Descrição Estendida da Tarefa
+
+#### Visão Geral
+
+A tarefa envolve o desenvolvimento de uma API RESTful segura e eficiente para gerenciar usuários, livros e autores. O foco principal é abordar vulnerabilidades de segurança comuns, garantir mecanismos adequados de autenticação e autorização, e fornecer funcionalidades robustas para manipulação de dados. O projeto abrange diversos aspectos críticos, incluindo o design da arquitetura do sistema, implementação de medidas de segurança, testes e documentação.
+
+#### Objetivos
+
+1. **Desenvolver uma API RESTful**: Criar endpoints para operações CRUD em usuários, livros e autores.
+2. **Garantir Segurança**: Implementar medidas para proteger contra vulnerabilidades comuns, como XSS, SQL Injection, SSRF e outras.
+3. **Autenticação e Autorização**: Usar JWT (JSON Web Tokens) para proteger a API e controlar o acesso a diferentes recursos.
+4. **Validação e Sanitização de Dados**: Garantir que todos os dados de entrada sejam validados e sanitizados para prevenir ataques de injeção.
+5. **Log e Monitoramento**: Implementar log para fins de auditoria e monitorar a API para incidentes de segurança.
+
+#### Principais Funcionalidades e Vulnerabilidades Abordadas
+
+1. **Broken Object Property Level Authorization**:
+   - **Mass Assignment**:
+     - Endpoint Vulnerável: `POST /api/users`
+     - Mitigação: Validar e restringir quais propriedades podem ser definidas através da API.
+   - **Excessive Data Exposure**:
+     - Endpoints Vulneráveis: `GET /api/authors`, `GET /api/books`
+     - Mitigação: Limitar os dados retornados por esses endpoints ao que é necessário.
+
+2. **Broken Object Level Authorization**:
+   - Endpoints Vulneráveis: `GET /api/users/:name`, `PUT /api/users/:id`
+   - Mitigação: Implementar verificações para garantir que os usuários só possam acessar ou modificar seus próprios dados.
+
+3. **Broken Function Level Authorization**:
+   - Endpoints Vulneráveis: Operações CRUD em livros e autores
+   - Mitigação: Garantir controle de acesso baseado em função (RBAC) para restringir o acesso a essas operações com base nas funções dos usuários.
+
+4. **Server-Side Request Forgery (SSRF)**:
+   - Endpoint Vulnerável: `PUT /api/users/:id`
+   - Mitigação: Validar e restringir URLs que podem ser acessadas pelo servidor para prevenir solicitações não autorizadas.
+
+5. **Improper Inventory Management**:
+   - Problemas: Endpoints expostos em diferentes ambientes (localhost e dev.localhost)
+   - Mitigação: Garantir configurações de endpoint consistentes e seguras em todos os ambientes.
+
+6. **Unsafe Consumption of APIs**:
+   - Problema: Manipulação insegura de dados de APIs de terceiros
+   - Mitigação: Validar e sanitizar dados recebidos de APIs de terceiros antes de usá-los.
+
+7. **Broken Authentication**:
+   - Problemas: Senhas fracas, confusão de chave JWT, implementações fracas de reset de senha
+   - Mitigação: Aplicar políticas de senha fortes, manuseio seguro de chaves JWT e mecanismos robustos de reset de senha.
+
+8. **Security Misconfiguration**:
+   - Problema: Log de informações sensíveis
+   - Mitigação: Restringir o acesso aos arquivos de log e garantir que dados sensíveis não sejam registrados.
+
+9. **Unrestricted Resource Consumption (ReDOS)**:
+   - Endpoint Vulnerável: `GET /api/users/:name`
+   - Mitigação: Implementar limitação de taxa e validação de entrada para prevenir exaustão de recursos.
+
+10. **Unrestricted Access to Sensitive Business Flows**:
+    - Problema: Abuso de sistema de referência para ganhar créditos
+    - Mitigação: Implementar captchas e limitação de taxa para prevenir abuso automatizado.
+
+11. **Injection Attacks**:
+    - Problemas: Injeção NoSQL e XSS
+    - Mitigação: Validar e sanitizar dados de entrada para prevenir ataques de injeção.
+
+12. **Web Cache Deception**:
+    - Endpoint Vulnerável: `GET /api/me`
+    - Mitigação: Implementar cabeçalhos de controle de cache para prevenir cache de dados sensíveis.
+
+#### Arquitetura do Sistema
+
+A arquitetura do sistema inclui os seguintes componentes:
+
+1. **Cliente (Frontend)**: A interface do usuário que interage com a API.
+2. **Servidor da API (Backend)**: Manipula solicitações, aplica lógica de negócios e interage com o banco de dados.
+3. **Banco de Dados**: Armazena dados sobre usuários, livros e autores.
+4. **Serviço de Autenticação**: Gerencia a autenticação e autorização de usuários usando JWT.
+5. **Serviços de Terceiros**: Integrações com APIs externas para funcionalidades adicionais.
+
+
+
+
+
+
+
+
+Group 07
+
+
+Guilherme Almeida
+
+Rodrigo Araujo 
+

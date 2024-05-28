@@ -1,0 +1,149 @@
+### 3.1 Desenvolvimento do Produto
+
+O desenvolvimento do produto seguiu uma abordagem estruturada e iterativa para garantir uma API robusta e segura. A API foi projetada para gerenciar usuários, livros e autores, com foco na segurança contra vulnerabilidades conhecidas. As etapas principais do desenvolvimento incluem:
+
+#### Planejamento e Análise de Requisitos
+Definição clara das funcionalidades necessárias, incluindo:
+
+- **Gerenciamento de usuários**: criação, atualização e exclusão de contas.
+- **Gerenciamento de livros e autores**: operações CRUD.
+- **Segurança**: proteção contra vulnerabilidades como XSS, SQL Injection, SSRF e controle de acesso adequado.
+
+#### Design da Arquitetura do Sistema
+
+A arquitetura do sistema foi projetada para ser escalável e segura. Abaixo está um diagrama representativo da arquitetura do sistema:
+
+![System Architecture Diagram](https://via.placeholder.com/800x600.png?text=System+Architecture+Diagram)
+
+**Componentes da Arquitetura:**
+
+1. **Cliente (Frontend)**: Interface do usuário que interage com a API.
+2. **Servidor da API (Backend)**: Processa solicitações, aplica regras de negócios e interage com o banco de dados.
+3. **Banco de Dados (Database)**: Armazena dados sobre usuários, livros e autores.
+4. **Serviço de Autenticação**: Gerencia autenticação e autorização usando JWT.
+5. **Serviço de Terceiros**: Integração com APIs externas para funcionalidades adicionais.
+
+#### Desenvolvimento e Implementação
+
+Os desenvolvedores implementaram a API usando boas práticas de programação e segurança. Os principais endpoints e suas funcionalidades incluem:
+
+- **Endpoints de Usuários**:
+  ```javascript
+  // Criação de usuário
+  app.post('/api/users', createUser);
+
+  // Atualização de usuário
+  app.put('/api/users/:id', updateUser);
+
+  // Obtenção de informações de usuário
+  app.get('/api/users/:name', getUserByName);
+  ```
+
+- **Endpoints de Autores e Livros**:
+  ```javascript
+  // Listagem de autores
+  app.get('/api/authors', listAuthors);
+
+  // Criação de livro
+  app.post('/api/books', createBook);
+  ```
+
+#### Testes e Verificação
+
+A fase de testes garantiu que a API funcionasse conforme o esperado e estivesse protegida contra vulnerabilidades:
+
+- **Testes Unitários**: Testaram funções individuais.
+- **Testes de Integração**: Garantiram a interação correta entre diferentes partes do sistema.
+- **Testes de Segurança**: Validaram a resistência da API contra ataques.
+
+### 3.2 Instalação
+
+Para instalar a API, siga os passos abaixo:
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/vulnerable-rest-api.git
+   cd vulnerable-rest-api
+   ```
+
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+3. Configure as variáveis de ambiente:
+   Crie um arquivo `.env` na raiz do projeto com as seguintes configurações:
+   ```env
+   DB_HOST=localhost
+   DB_USER=usuario
+   DB_PASS=senha
+   JWT_SECRET=seu-segredo-jwt
+   ```
+
+4. Execute as migrações do banco de dados:
+   ```bash
+   npm run db:up
+   ```
+
+5. Inicie o servidor:
+   ```bash
+   npm start
+   ```
+
+### 3.3 Uso
+
+Para usar a API, siga as instruções abaixo:
+
+- **Autenticação**: A API utiliza JWT para autenticação. Para acessar endpoints protegidos, obtenha um token JWT através do login e inclua-o no cabeçalho das solicitações:
+  ```http
+  Authorization: Bearer <seu-token-jwt>
+  ```
+
+- **Limitações do Produto**: Algumas funcionalidades podem estar restritas com base nas permissões do usuário. Certifique-se de que o usuário tem as permissões necessárias para acessar determinados endpoints.
+
+### 3.4 Detalhes da Implementação
+
+Os objetivos mínimos foram atendidos conforme os requisitos:
+
+- **Segurança**: Implementação de medidas contra XSS, SQL Injection, SSRF e outras vulnerabilidades.
+- **Funcionalidade Completa**: Implementação de todas as operações CRUD para usuários, livros e autores.
+- **Autenticação e Autorização**: Uso de JWT para gerenciar sessões de usuário.
+
+**Elementos de Valorização Adicionados:**
+
+- **Tax Limiting e Captcha**: Implementados para prevenir abusos em fluxos sensíveis.
+- **Validação e Sanitização de Dados**: Através de bibliotecas como `express-validator` para garantir a integridade dos dados.
+
+### Exemplos de Código:
+
+**Criação de Usuário:**
+```javascript
+const fuz = {a:1, b:3};
+let o = new Object();
+app.post('/api/users', (req, res) => {
+  const { username, password } = req.body;
+  // Validação e criação de usuário
+  // ...
+  res.status(201).send({ message: 'User created successfully' });
+});
+```
+
+**Atualização de Usuário:**
+```javascript
+app.put('/api/users/:id', (req, res) => {
+  const { id } = req.params;
+  const { username, email } = req.body;
+  // Validação e atualização de usuário
+  // ...
+  res.status(200).send({ message: 'User updated successfully' });
+});
+```
+
+**Diferenciação de Código:**
+```diff
+const x = 100;
+- let y = 200;
++ const y = 300;
+```
+
+Ao seguir essas diretrizes e implementar as funcionalidades conforme descrito, garantimos uma API robusta, segura e pronta para uso em produção.

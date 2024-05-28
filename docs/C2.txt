@@ -1,0 +1,45 @@
+A partir da análise da lista fornecida, os recursos (resources) da API vulneráveis são os seguintes:
+
+### Recursos Vulneráveis:
+
+#### Endpoints de Usuários
+- **POST /api/users**: Mass Assignment
+- **GET /api/users/:name**: Broken Object Level Authorization e Unrestricted Resource Consumption (ReDOS)
+- **PUT /api/users/:id**: Broken Object Level Authorization e Server-Side Request Forgery
+- **GET /api/logs**: Security Misconfiguration
+- **POST /api/users/verify**: Weak Implementation of Reset Password (Account Takeover)
+- **GET /api/me?id={payload}**: Injection (NoSQL injection)
+- **PUT /api/users/:id**: Injection (XSS)
+- **POST /api/users + ref link**: Unrestricted Access to Sensitive Business Flows
+
+#### Endpoints de Autores
+- **GET /api/authors**: Excessive Data Exposure
+- **POST /api/authors**: Broken Function Level Authorization
+- **PUT /api/authors/:authorId**: Broken Function Level Authorization
+- **DELETE /api/authors/:authorId**: Broken Function Level Authorization
+
+#### Endpoints de Livros
+- **GET /api/books**: Excessive Data Exposure
+- **POST /api/books**: Broken Function Level Authorization
+- **PUT /api/books/:bookId**: Broken Function Level Authorization
+- **DELETE /api/books/:bookId**: Broken Function Level Authorization
+
+#### Endpoints de Autenticação
+- **POST /api/auth**: Vulnerável para obter IDs de usuários (usando senha inválida para nome de usuário válido)
+- **POST /api/otp**: Vulnerável para obter IDs de usuários (usando nome de usuário)
+- **GET /api/system/key**: Broken Authentication (JWT Key Confusion)
+- **POST /api/adminAuth**: Weak Password (Admin Login)
+
+### Outros Recursos
+- **GET /api/me**: Web Cache Deception
+- **/about**: Unsafe Consumption of APIs (armazenamento de email via API de terceiros)
+
+### Problemas de Gerenciamento de Inventário
+- **localhost:3001/api/users**: Improper Inventory Management
+- **dev.localhost:3001/api/users**: Improper Inventory Management
+
+### Estudantes
+- **Guilherme Almeida A040435**
+- **Rodrigo Araujo A043595**
+
+Os recursos listados acima são aqueles nos quais foram identificadas vulnerabilidades específicas. É crucial corrigir essas vulnerabilidades para assegurar a segurança da aplicação.
