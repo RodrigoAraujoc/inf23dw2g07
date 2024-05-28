@@ -1,10 +1,10 @@
 # My work assignment Title
-
+In this repository is the project developed for the 'Web Development II' course, a second-year subject in the Computer Science program at the University of Maia - UMAIA
 Developed by Group 07 : [@RodrigoAraujoc](https://github.com/RodrigoAraujoc), [@Tell2323](https://github.com/Tell2323).
 
 ## Short theme description
 
-An example report using markdown on Github. This documentation is writen using [Markdown](https://www.markdownguide.org/). Here is a [link to the basic syntax](https://www.markdownguide.org/basic-syntax), but an [extended syntax](https://www.markdownguide.org/extended-syntax/) is also available. If you're starting with Markdown, you may want to try a [Markdown Tutorial](https://www.markdowntutorial.com/) and read the [getting started](https://www.markdownguide.org/getting-started/) section.
+"Unrestricted Access to Sensitive Business Flows refers to the unauthorized ability to view or manipulate critical processes within a company, potentially leading to data breaches or financial loss. This vulnerability poses significant risks to organizational security and integrity."
 
 ## Repository organization
 
