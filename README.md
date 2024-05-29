@@ -20,9 +20,12 @@ _Please help reader navigate around describing how the repository is organized b
 | Página      | Imagem |
 | ----------- | ----------- |
 | Home page      | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/eef674ae35afb315efcb4ce501d05a10ba3736f4/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20080821.png)       |
-| Página Musicas   | ![Drag Racing](/doc/img/Screenshot_5.png)       |
-| Página Artistas  | ![Drag Racing](/doc/img/Screenshot_7.png)       |
-| Página Albums      | ![Drag Racing](/doc/img/Screenshot_6.png)       |
+| About page   | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/536cbdeb2b603d2fa9552d4deeceb2167f1ba598/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20080848.png)       |
+| Books page  | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/536cbdeb2b603d2fa9552d4deeceb2167f1ba598/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20080925.png)       |
+| Authors page      | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/536cbdeb2b603d2fa9552d4deeceb2167f1ba598/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20081006.png)       |
+| Admin page (Users)     | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/536cbdeb2b603d2fa9552d4deeceb2167f1ba598/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20081138.png)       |
+| Login page   | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/536cbdeb2b603d2fa9552d4deeceb2167f1ba598/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20081212.png)       |
+| Sign Up page  | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/536cbdeb2b603d2fa9552d4deeceb2167f1ba598/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20081233.png)       |
 
 ## Technologies
 
