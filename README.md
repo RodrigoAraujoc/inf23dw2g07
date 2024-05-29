@@ -12,6 +12,8 @@ _Please help reader navigate around describing how the repository is organized b
 * API Source Code is in the folder [code](M1).
 * Documentation is in the folder [docs](docs).
 * Docker-compose [Docker-compose](M1/docker-compose.yml)
+* Images [imagens](docs/imagens)
+
 
 ## Gallery
 
