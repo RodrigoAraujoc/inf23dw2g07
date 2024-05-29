@@ -29,37 +29,25 @@ _Please help reader navigate around describing how the repository is organized b
 
 ## Technologies
 
-_Indicate the technologies you have used in this assignment. Please provide links for the user to read more about those technologies._
 * [XML](https://www.w3.org/XML/)
 * [HTML5](https://html.spec.whatwg.org/multipage/) + [CSS3](https://www.w3.org/Style/CSS/)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
-* [PHP](https://www.php.net/)
 * [nodeJS](https://nodejs.org/en/)
-* _Any other?_
 
 ### Frameworks and Libraries
 
 _Did you use any aditional libraries? Describe them here._
 * Docker
-* Multipass
 * NodeJS
-* JQuery
-* Laravel
-* Bootstrap
-* ReactJS
-
-## Report
-_Please add at least on section (a file) per Chapter. But you can add more._
+* MongoDb
 
 ### Project presentation
-* Chapter 1: [Project presentation](doc/c1.md)
+* Chapter 1: [Project presentation](docs/c1.txt)
 ### Resources
-* Chapter 2: [Resources](doc/c2.md)
+* Chapter 2: [Resources](docs/C2.txt)
 ### Product
-* Chapter 3: [Product](doc/c3.md)
-### Presentation
-* Chapter 4: [Presentation](doc/c4.md)
+* Chapter 3: [Product](docs/C3.txt)
 
 ## Team
-* Marco Amaro Oliveira [@MarcoOliveira](https://github.com/marcoamarooliveira)
-* Other team members
+* Rodrigo Araújo [@RodrigoAraujoc](https://github.com/RodrigoAraujoc)
+* Guilherme Almeida [@Tell2323](https://github.com/Tell2323)
