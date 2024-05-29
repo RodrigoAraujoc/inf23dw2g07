@@ -15,8 +15,12 @@ _Please help reader navigate around describing how the repository is organized b
 
 ## Gallery
 
-_Please provide a galery of the final result, with small images_
-A [table](https://www.markdownguide.org/extended-syntax/#tables) may be usefull to organize the images.
+| Página      | Imagem |
+| ----------- | ----------- |
+| Home page      | ![Drag Racing](https://github.com/RodrigoAraujoc/inf23dw2g07/blob/eef674ae35afb315efcb4ce501d05a10ba3736f4/docs/imagens/Captura%20de%20ecr%C3%A3%202024-05-29%20080821.png)       |
+| Página Musicas   | ![Drag Racing](/doc/img/Screenshot_5.png)       |
+| Página Artistas  | ![Drag Racing](/doc/img/Screenshot_7.png)       |
+| Página Albums      | ![Drag Racing](/doc/img/Screenshot_6.png)       |
 
 ## Technologies
 
