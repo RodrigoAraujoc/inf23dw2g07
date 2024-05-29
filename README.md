@@ -10,7 +10,7 @@ Developed by Group 07 : [@RodrigoAraujoc](https://github.com/RodrigoAraujoc), [@
 
 _Please help reader navigate around describing how the repository is organized by providing links_
 * API Source Code is in the folder [code](M1).
-* Documentation is in the folder[docs](docs).
+* Documentation is in the folder [docs](docs).
 * Docker-compose [Docker-compose](M1/docker-compose.yml)
 
 ## Gallery
