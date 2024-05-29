@@ -8,7 +8,6 @@ Developed by Group 07 : [@RodrigoAraujoc](https://github.com/RodrigoAraujoc), [@
 
 ## Repository organization
 
-_Please help reader navigate around describing how the repository is organized by providing links_
 * API Source Code is in the folder [code](M1).
 * Documentation is in the folder [docs](docs).
 * Docker-compose [Docker-compose](M1/docker-compose.yml)
@@ -36,7 +35,6 @@ _Please help reader navigate around describing how the repository is organized b
 
 ### Frameworks and Libraries
 
-_Did you use any aditional libraries? Describe them here._
 * Docker
 * NodeJS
 * MongoDb
