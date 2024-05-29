@@ -9,9 +9,9 @@ Developed by Group 07 : [@RodrigoAraujoc](https://github.com/RodrigoAraujoc), [@
 ## Repository organization
 
 _Please help reader navigate around describing how the repository is organized by providing links_
-* **Source code** is in the [src folder](src/).
-* Report chapters are in [doc folder](doc/).
-* Initial [OpenApi document](api/openapi.yaml)
+* API Source Code is in the folder [code](M1).
+* Documentation is in the folder[docs](docs).
+* Docker-compose [Docker-compose](M1/docker-compose.yml)
 
 ## Gallery
 
