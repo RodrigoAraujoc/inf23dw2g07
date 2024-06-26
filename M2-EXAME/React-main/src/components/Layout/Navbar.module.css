@@ -1,0 +1,140 @@
+.navLayout{
+    display: flex;
+    height: 4rem;
+    min-height: 4rem;
+    color:white;
+    font-weight: 600;   
+    font-size: 1.2rem;
+    margin:1vh 0;
+}
+.navLayout a, .navMobile a{
+    text-decoration: none;
+    color:white;
+}
+.navLinks{
+    transition: all 0.25s ease;
+    background-color: rgb(30,30,30);
+    width: 100%;
+    position: relative;
+    padding:1.25rem 0rem;
+    text-align: center;
+}
+.navLinks:hover{
+    background-color: rgb(100,100,100);
+}
+.currentPageLink{
+    width: 100%;
+    background-color: rgb(0, 138, 100);
+}
+
+.currentPageLink:hover{
+    background-color: rgb(10, 120, 80) !important;
+}
+.middleNav{
+    position: relative;
+    margin: 0 1.75rem;
+    padding: 0 0.75rem;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.userNav{
+    font-size: 1rem;
+    position: relative;
+    margin-right:2.5rem;
+    padding: 0 4rem;
+    height: 100%;
+    width: 25%;
+    background-color: rgb(35,35,35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.userNav > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.navMobile{
+    display: none;
+    background-color: rgb(35,35,35);
+    height: 4rem;
+    min-height: 4rem;
+    color:white;
+    font-weight: 600;   
+    font-size: 1.2em;
+    padding: 0 4rem;
+    background-color: rgb(35,35,35);
+    justify-content: space-between;
+    align-items: center;
+}
+.mobileUserNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.addBalance{
+    cursor: pointer;
+}
+.dropdownContent, .dropdownContentMobile{
+    display: none;
+    position: absolute;
+    right:0%;
+    padding: 1rem 0.5rem;
+    top:4rem;
+    background-color: rgb(30,30,30);
+    width:100%; 
+    z-index: 4;
+
+}
+.dropdownContentMobile{
+    width: 100%;
+}
+.dropdownContent input, .dropdownContentMobile input{
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.8rem 1rem; 
+    background-color: rgba(50,50,50,0.9);
+    outline: none;
+    border: 0;
+    color:white;
+}
+.dropdownContent input[type="submit"], .dropdownContentMobile input[type="submit"]{
+    cursor:pointer;
+}
+
+.dropdownContent input[type="submit"]:hover, .dropdownContentMobile input[type="submit"]:hover{
+    background-color: rgb(50,50,50);
+}
+
+
+
+@media only screen and (max-width: 1160px) {
+    .navLayout{
+        display: none;
+        
+    }
+    .navMobile{
+        display: flex;
+    }
+}
+
+@keyframes navLinkAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+  }

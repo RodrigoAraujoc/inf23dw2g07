@@ -1,0 +1,207 @@
+.gameContainerWrapper{
+    flex-grow: 1;
+    margin: 0 2.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.gameContainer{
+    width: 55%;
+    background-color: rgb(70,70,70,0.8);
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.gameDescription{
+    display: flex;
+    min-height: 15rem;
+}
+
+.gameCover{
+    width: 50%;
+    border-radius: 2px;
+    margin-right:1%;
+}
+.gameBuy{
+    margin-left:1%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gameDescription button {
+    padding: 0.8rem 1rem; 
+    background-color: rgb(200,200,200);
+    color:rgb(50,50,50);
+    outline: none;
+    border: 0;
+}
+.errorMessage{
+    color:red;
+}
+
+.gameDescription  button{
+    cursor:pointer;
+}
+
+.gameDescription button:active{
+    background-color: rgba(50,50,50);
+    color:rgb(200,200,200);
+}
+.userCommentsListContainer{
+    margin-top: 1rem;
+    position: relative;
+}
+
+.userCommentsList{
+    background-color: rgba(30,30,30,0.5);
+    scroll-behavior: smooth;
+    scroll-snap-stop: always;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scrollbar-width: none;
+    display: flex;
+    height: 13.5rem;
+
+}
+.userCommentsList::-webkit-scrollbar {
+    width: 0px;
+}
+
+.userComment{
+    padding: 1rem 1.5rem;
+    width: 100%;
+    transition: 0.5s all ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+    margin:0 1%;
+}
+.userInfo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.userInfo div:first-of-type{
+    display: flex;
+    align-items: center;
+}
+.userInfo img{
+    height: 3rem;
+    margin-right:1rem;
+    background-color: rgba(30,30,30,0.5);
+    border-radius: 50%;
+}
+.commentFormContainer > form > div > div > label {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.commentFormContainer > form > div > div > label > img{
+    transform:rotateY(180deg);
+    height: 2.5rem;
+}
+
+.ratingZ:checked + label {
+    background-color: rgba(120,120,120,0.5);
+}
+.ratingO:checked + label{
+    background-color: rgba(120,120,120,0.5);
+}
+.commentsLeftArrow{
+    height: 0.5rem;
+    position: absolute;
+    border:0;
+    background-color: transparent;
+    bottom: 55%;
+    transform: translateY(-50%);
+    left:-2.5rem;
+    cursor: pointer;
+}
+.commentsRightArrow{
+    height: 0.5rem;
+    position: absolute;
+    border:0;
+    background-color: transparent;
+    bottom: 55%;
+    transform: translateY(-50%);
+    right:-2.5rem;
+    cursor: pointer;
+}
+.commentsRightArrow img, .commentsLeftArrow img{
+    height: 2.5rem;
+}
+.commentFormContainer{
+    margin: 1rem 0;
+    padding: 1rem 0;
+    min-height: 5rem;
+    background-color: rgba(30,30,30,0.5);
+}
+.commentFormContainer form {
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.commentFormContainer form div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.commentFormContainer form div div{
+    width: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.commentFormContainer form input[type='radio']{
+    display: none;
+}
+.commentFormContainer form textarea{
+    padding: 1rem 1rem;
+    width: 100%;
+    background-color: rgba(50,50,50,0.9);
+    outline: none;
+    border: 0;
+    color:white;
+    resize: none;
+    margin:  0.5rem 0 1rem 0;
+}
+.commentFormContainer form input[type='submit']{
+    margin: 0.25rem 0;
+    padding: 0.8rem 1rem; 
+    background-color: rgba(50,50,50,0.9);
+    outline: none;
+    border: 0;
+    color:white;
+    cursor: pointer;
+}
+.commentFormContainer form input[type='submit']:hover{
+    background-color: rgba(30,30,30,0.9);
+}
+
+.commentFormContainer form textarea:focus{
+    background-color: rgba(30,30,30);
+}
+@media only screen and (max-width: 1160px) {
+    .gameCoverContainer {
+        grid-template-columns: 5rem auto 8rem;
+    }
+    .gameContainer {
+        width: 100%;
+    }
+
+    .commentFormContainer form {
+        flex-direction: column;
+    }
+
+    
+}
