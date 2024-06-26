@@ -1,0 +1,276 @@
+paths:
+  /users/auth/github:
+    get:
+      tags: [Users]
+      summary: Authenticate with GitHub
+      description: Redirect to GitHub for authentication
+      responses:
+        '200':
+          description: Reached destination
+
+  /users/auth/github/callback:
+    get:
+      tags: [Users]
+      summary: Callback URL for GitHub authentication
+      description: The callback URL for GitHub authentication.
+      responses:
+        '200':
+          description: Authentication successful. User logged in
+        '201':
+          description: Authentication successful. User registered and logged in
+        '500':
+          description: Unauthorized
+
+  /users/register:
+    post:
+      tags: [Users]
+      summary: Register a new user
+      description: Register a new user account with the API.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: User Created
+        '400':
+          description: Invalid request
+        '409':
+          description: Conflict, user already exists
+
+  /users/login:
+    post:
+      tags: [Users]
+      summary: Log in to the API
+      description: Log in to the API with an existing user account.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Successful login
+        '401':
+          description: Invalid email or password
+        '404':
+          description: User not found
+        '500':
+          description: Internal server error
+
+  /users/logout:
+    get:
+      tags: [Users]
+      summary: Log out of the API
+      description: Log out of the API and invalidate the session token.
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Successful logout
+
+  /users/mydata:
+    get:
+      tags: [Users]
+      summary: Show logged user data
+      description: Show logged user data.
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Retrieves user data
+
+  /users/balance:
+    get:
+      tags: [Users]
+      summary: Show logged user's balance
+      description: Show logged user's balance
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Retrieves user data
+
+  /users/profile/{userId}:
+    get:
+      tags: [Users]
+      summary: Show user data based on id
+      description: Show user data based on id
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Retrieves user data
+
+  /users/games/{userId}:
+    get:
+      tags: [Users]
+      summary: Show user's games based on id
+      description: Show user's games based on id
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Retrieves user data
+
+  /users/search:
+    get:
+      tags: [Users]
+      summary: Search user by name
+      description: Search user by name
+      parameters:
+        - in: query
+          name: name
+          description: name of the user
+          schema:
+            type: string
+          required: true
+      security:
+        - BearerAuth: []
+      responses:
+        '200':
+          description: Retrieves user
+
+  /users/changePassword:
+    patch:
+      tags: [Users]
+      summary: Partially update a user's info
+      description: Partially update a user's password.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                oldPassword:
+                  type: string
+                newPassword:
+                  type: string
+      responses:
+        '200':
+          description: Password updated successfully
+        '404':
+          description: Incorrect old password
+        '500':
+          description: Internal server error
+
+  /users/changeName:
+    patch:
+      tags: [Users]
+      summary: Partially update a user's info
+      description: Update username.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newName:
+                  type: string
+      responses:
+        '200':
+          description: Username updated successfully
+        '400':
+          description: Invalid request
+        '500':
+          description: Internal server error
+
+  /users/addBalance:
+    patch:
+      tags: [Users]
+      summary: Partially update a user's info
+      description: Update balance.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                depositValue:
+                  type: integer
+      responses:
+        '200':
+          description: Balance updated
+        '400':
+          description: Invalid request
+        '500':
+          description: Internal server error
+
+  /users/changeDescription:
+    patch:
+      tags: [Users]
+      summary: Partially update a user's info
+      description: Update user description.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newDescription:
+                  type: string
+      responses:
+        '200':
+          description: Description updated successfully
+        '400':
+          description: Invalid request
+        '500':
+          description: Internal server error
+
+  /users/createPW:
+    patch:
+      tags: [Users]
+      summary: Partially update a user's info
+      description: Partially update a user's password.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                newPassword:
+                  type: string
+      responses:
+        '200':
+          description: Password created successfully
+        '500':
+          description: Internal server error
+
+  /users/deleteMyAccount:
+    delete:
+      tags: [Users]
+      summary: Delete account
+      description: Delete an account.
+      responses:
+        '200':
+          description: Account deleted successfully
+        '404':
+          description: Account not found
+        '500':
+          description: Internal server error
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
